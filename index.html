@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#07110f">
+<title>كنز قيمر | متجر ألعاب Steam</title>
+<style>
+:root{--bg:#07110f;--panel:#0d1a18;--panel2:#10221e;--line:#203b34;--green:#35e58a;--gold:#ffc94b;--muted:#9db3ac;--text:#f4fbf7}
+[data-theme="light"]{--bg:#f4f7f5;--panel:#ffffff;--panel2:#e9f0ec;--line:#d3dfd8;--muted:#52665d;--text:#18251f}
+[data-theme="light"] body{background:radial-gradient(ellipse at 85% -10%,#d9f0e3 0,transparent 34%),var(--bg);color:var(--text)}
+[data-theme="light"] header{background:#f7fbf8ee}
+[data-theme="light"] .navlinks{color:#34473e}
+[data-theme="light"] .search input{background:#fff;color:#17251e}
+[data-theme="light"] .trust div{background:#fff;color:#34473e}
+[data-theme="light"] .filter{background:#fff;color:#34473e}
+[data-theme="light"] .game{background:linear-gradient(180deg,#fff,#f1f6f3)}
+[data-theme="light"] .detail-card,[data-theme="light"] .drawer{background:#fff;color:#18251f}
+[data-theme="light"] .detail-description{color:#40554a}
+[data-theme="light"] .notice{background:#fff9e9}
+[data-theme="light"] .theme-toggle{background:#fff;border-color:#c7d7cd;color:#26392f}
+.theme-toggle{white-space:nowrap;border:1px solid var(--line);border-radius:11px;padding:9px 11px;background:#10201d;color:var(--text);font-weight:800}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 85% -10%,#143b2c 0,transparent 34%),var(--bg);color:var(--text);font-family:Tahoma,Arial,sans-serif;line-height:1.6}
+button,input,select{font:inherit}button{cursor:pointer}
+a{color:inherit;text-decoration:none}.wrap{max-width:1240px;margin:auto;padding:0 20px}
+header{position:sticky;top:0;z-index:5;background:#07110fee;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:22px;min-height:76px}.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:22px;white-space:nowrap}.logo{width:44px;height:44px;display:grid;place-items:center;border:1px solid #9c7725;border-radius:13px;background:linear-gradient(135deg,#523b09,#d79c19);font-size:26px;box-shadow:0 0 25px #ffc94b22}.brand small{display:block;color:var(--gold);font-size:10px;letter-spacing:3px;line-height:1}
+.steam-mark{display:flex;align-items:center;gap:9px;padding:8px 12px;border:1px solid #314a5d;border-radius:12px;background:linear-gradient(135deg,#172b3a,#0c171e);white-space:nowrap}
+.steam-mark img{display:block;width:90px;height:34px;object-fit:contain}
+.steam-fallback{display:none}
+.steam-mark b{display:block;letter-spacing:2px;font-size:15px;color:#f2f7fb;line-height:1.1}
+.steam-mark small{display:block;color:#a9c0cf;font-size:10px}
+.navlinks{display:flex;gap:18px;color:#d0ded8;font-size:13px}.navlinks a:hover{color:var(--green)}.search{flex:1;display:flex;gap:8px;min-width:150px}.search input{width:100%;background:#10201d;border:1px solid var(--line);border-radius:12px;padding:12px 14px;color:white;outline:none}.search input:focus{border-color:var(--green)}.cartbtn,.btn{border:0;border-radius:12px;padding:11px 16px;background:var(--green);color:#032014;font-weight:800}.cartbtn{white-space:nowrap}.cart-count{display:inline-grid;place-items:center;min-width:22px;height:22px;border-radius:99px;background:#07110f;color:var(--green);margin-right:5px}
+.hero{margin:26px 0 22px;border:1px solid #285443;border-radius:22px;overflow:hidden;min-height:300px;background:linear-gradient(100deg,#07110f 0%,#0b2119 54%,#1b3017 100%);position:relative;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;padding:38px 42px}.hero:after{content:"";position:absolute;width:330px;height:330px;border-radius:50%;border:1px solid #d9a92a55;left:5%;top:-15%;box-shadow:0 0 0 35px #d9a92a0a,0 0 0 75px #d9a92a08}.eyebrow{color:var(--green);font-weight:800;font-size:13px}.hero h1{font-size:clamp(28px,4vw,48px);line-height:1.25;margin:10px 0}.hero h1 span{color:var(--gold)}.hero p{color:#c2d3cc;max-width:540px}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.btn.secondary{background:transparent;color:var(--text);border:1px solid #54756a}.treasure{position:relative;z-index:1;text-align:center;font-size:clamp(80px,12vw,150px);filter:drop-shadow(0 12px 24px #0008)}.treasure strong{display:block;font-size:30px;color:var(--gold);letter-spacing:5px}
+.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:30px}.trust div{border:1px solid var(--line);border-radius:14px;padding:14px;background:#0b1715;color:#d9e7e1;font-size:13px}.trust b{color:var(--green);margin-left:7px}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:15px;margin:28px 0 15px}.section-head h2{margin:0;font-size:23px}.section-head p{margin:4px 0 0;color:var(--muted);font-size:13px}
+.filters{display:flex;gap:9px;overflow:auto;padding:2px 0 12px}.filter{white-space:nowrap;border:1px solid var(--line);background:#0d1a18;color:#d7e6df;border-radius:99px;padding:9px 15px}.filter.active,.filter:hover{background:#123e2a;border-color:var(--green);color:#7fffb7}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}.game{background:linear-gradient(180deg,#10201d,#091310);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:.2s}.game:hover{transform:translateY(-3px);border-color:#3b8d67}.cover{height:150px;display:flex;cursor:pointer;align-items:center;justify-content:center;text-align:center;padding:15px;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--c1),var(--c2))}.cover:before,.cover:after{content:"";position:absolute;border:1px solid #ffffff35;border-radius:50%;width:170px;height:170px;transform:rotate(28deg);right:-45px;top:-60px}.cover:after{width:100px;height:100px;right:auto;left:-25px;top:70px}.cover.steam-cover{padding:0;background:linear-gradient(135deg,var(--c1),var(--c2))}.cover.steam-cover:before,.cover.steam-cover:after{display:none}.cover.steam-cover img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}.cover .emoji{font-size:54px;filter:drop-shadow(0 5px 9px #0007);z-index:1}.cover .cover-title{position:absolute;bottom:8px;right:12px;left:12px;font-weight:900;text-shadow:0 2px 6px #000;z-index:1;font-size:14px}.gamebody{padding:13px}.gamebody h3{font-size:15px;margin:0 0 6px}.desc{color:var(--muted);font-size:12px;min-height:38px}.meta{display:flex;justify-content:space-between;align-items:center;margin:10px 0}.tag{font-size:11px;color:#89eeb4;background:#123522;padding:3px 7px;border-radius:7px}.price{font-weight:900;color:var(--green);font-size:18px}.old{color:#71827b;text-decoration:line-through;font-size:11px;margin-right:5px}.add{width:100%;border:1px solid #287b50;background:#0e3927;color:#8cffb9;border-radius:10px;padding:9px;font-weight:800}.add:hover{background:var(--green);color:#052113}
+.detail-overlay{position:fixed;inset:0;background:#000b;z-index:20;display:none;align-items:center;justify-content:center;padding:18px}.detail-overlay.open{display:flex}.detail-card{width:min(560px,100%);max-height:90vh;overflow:auto;background:#0d1a18;border:1px solid #315a49;border-radius:18px;padding:20px;box-shadow:0 20px 70px #0009}.detail-cover{height:190px;border-radius:12px;display:grid;place-items:center;font-size:72px;margin-bottom:16px;background:linear-gradient(135deg,var(--c1),var(--c2))}.detail-card h2{margin:0 0 8px}.detail-description{color:#c6d8d0;line-height:1.9}.detail-bottom{border-top:1px solid var(--line);margin-top:18px;padding-top:15px;display:flex;align-items:center;justify-content:space-between;gap:12px}.detail-price{font-size:23px;font-weight:900;color:var(--green)}.detail-close{background:transparent;color:white;border:1px solid var(--line);border-radius:9px;padding:7px 12px}.empty{display:none;padding:32px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:14px}.notice{margin:28px 0;background:#111f19;border:1px solid #5b4920;border-radius:14px;padding:16px;color:#e9d9a8;font-size:13px}
+footer{border-top:1px solid var(--line);margin-top:40px;padding:28px 0;color:var(--muted);font-size:12px}.footrow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.overlay{position:fixed;inset:0;background:#0009;z-index:10;display:none;justify-content:flex-start}.overlay.open{display:flex}.drawer{width:min(440px,100%);height:100%;background:#091512;border-left:1px solid var(--line);padding:22px;overflow:auto}.drawerhead{display:flex;justify-content:space-between;align-items:center}.close{background:transparent;color:white;border:1px solid var(--line);border-radius:9px;padding:6px 12px}.cartline{display:flex;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}.cartline small{display:block;color:var(--muted)}.remove{background:transparent;border:0;color:#ff8b8b;font-size:12px}.total{display:flex;justify-content:space-between;font-size:20px;font-weight:900;margin:20px 0}.checkout{width:100%;padding:13px;border:0;border-radius:12px;background:var(--green);font-weight:900;color:#062113}.checkout-note{font-size:12px;color:var(--muted);margin-top:12px}
+
+.toast{position:fixed;top:18px;right:50%;transform:translate(50%,-150%);opacity:0;z-index:50;width:min(390px,calc(100% - 28px));display:flex;align-items:center;gap:12px;padding:13px 15px;border-radius:18px;background:rgba(247,249,252,.97);color:#17202b;box-shadow:0 12px 35px #0005;border:1px solid #dfe4ea;transition:transform .28s ease,opacity .28s ease;pointer-events:none}.toast.show{transform:translate(50%,0);opacity:1}.toast-icon{width:40px;height:40px;flex:none;display:grid;place-items:center;background:#34c759;color:white;border-radius:12px;font-size:23px}.toast-copy{min-width:0;flex:1}.toast-copy strong{display:block;font-size:14px}.toast-copy span{display:block;color:#5b6570;font-size:12px}.toast-time{font-size:11px;color:#737d87;align-self:flex-start;white-space:nowrap}.faq{margin:34px 0}.faq h2{margin-bottom:14px}.faq details{border:1px solid var(--line);background:#0d1a18;border-radius:12px;padding:14px 16px;margin:9px 0}.faq summary{cursor:pointer;font-weight:800}.faq details p{color:#b7c9c1;margin:10px 0 0;font-size:14px}.hero-banner{margin:26px 0 22px;border:1px solid #6d4d16;border-radius:22px;overflow:hidden;background:#07110f;box-shadow:0 12px 40px #0008;line-height:0}.hero-banner img{display:block;width:100%;height:auto;object-fit:cover}
+@media(max-width:950px){.navlinks{display:none}.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hero{padding:28px}.treasure{font-size:90px}}
+@media(max-width:680px){.wrap{padding:0 13px}.nav{gap:10px;min-height:68px;flex-wrap:wrap;padding:10px 0}.brand{font-size:17px}.logo{width:38px;height:38px}.steam-mark{padding:6px 8px;gap:6px}.steam-mark small{display:none}.steam-mark img{width:76px;height:28px}.steam-mark b{font-size:12px}.search{order:3;flex-basis:100%}.cartbtn{margin-right:auto;padding:9px 11px}.hero{grid-template-columns:1fr;padding:25px 22px;min-height:0}.treasure{display:none}.hero h1{font-size:31px}.trust{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.cover{height:120px}.cover .emoji{font-size:42px}.gamebody{padding:10px}.gamebody h3{font-size:13px}.desc{font-size:11px}.section-head h2{font-size:20px}}
+@media(max-width:360px){.grid{grid-template-columns:1fr}}
+
+.game-pagination{display:flex;align-items:center;justify-content:center;gap:14px;margin:22px 0 8px;direction:rtl}.game-pagination button{border:1px solid var(--gold);background:var(--panel);color:var(--text);padding:10px 16px;border-radius:12px;font-weight:700;cursor:pointer}.game-pagination button:disabled{opacity:.35;cursor:not-allowed}.game-pagination span{color:var(--muted);font-size:14px;min-width:75px;text-align:center}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="brand" href="#"><span class="logo">🧰</span><span>كنز قيمر<small>KANZ GAMER</small></span></a>
+<div class="steam-mark" aria-label="Steam"><img src="https://store.cloudflare.steamstatic.com/public/shared/images/header/logo_steam.svg" alt="Steam" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="steam-fallback"><b>STEAM</b><small>متجر ألعاب الكمبيوتر</small></span></div>
+<nav class="navlinks"><a href="#home">الرئيسية</a><a href="#games">الألعاب</a><a href="#categories">التصنيفات</a><a href="#faq">الأسئلة الشائعة</a><a href="#about">عن المتجر</a></nav>
+<div class="search"><input id="search" type="search" placeholder="ابحث عن لعبة أو تصنيف..." aria-label="ابحث عن لعبة"></div>
+<button class="theme-toggle" id="themeToggle" type="button" aria-label="تبديل المظهر">☀️ فاتح</button><button class="cartbtn" id="openCart">🛒 السلة <span class="cart-count" id="cartCount">0</span></button>
+</div></header>
+<main class="wrap">
+<section class="hero-banner" id="home" aria-label="كنز قيمر - كنز الألعاب"><img src="kanz-treasure-banner.png" alt="كنز قيمر، متجر ألعاب بتصميم كنز ذهبي وألعاب Steam"></section>
+<section class="trust"><div><b>✓</b> أسعار واضحة بالريال السعودي</div><div><b>⌕</b> بحث وتصنيفات سهلة</div><div><b>♡</b> تجربة مصممة لعشاق الألعاب</div></section>
+<section id="categories"><div class="section-head"><div><h2>تصفّح حسب التصنيف</h2><p>اختر نوع الألعاب الذي يناسبك</p></div></div><div class="filters" id="filters">
+<button class="filter active" data-cat="الكل">كل الألعاب</button><button class="filter" data-cat="مغامرات">مغامرات</button><button class="filter" data-cat="عالم مفتوح">عالم مفتوح</button><button class="filter" data-cat="رعب">رعب</button><button class="filter" data-cat="استراتيجية">استراتيجية</button><button class="filter" data-cat="مستقلة">ألعاب مستقلة</button><button class="filter" data-cat="سباقات">سباقات</button>
+</div></section>
+<section id="games"><div class="section-head"><div><h2>🎮 Steam Games</h2><p>Sample catalog · Demo prices only — not confirmed offers</p></div><span class="eyebrow" id="resultCount"></span></div><div class="grid" id="grid"></div><div class="game-pagination" aria-label="التنقل بين الألعاب"><button id="gamesPrev" type="button" aria-label="الألعاب السابقة">→ السابق</button><span id="pageInfo">صفحة 1</span><button id="gamesNext" type="button" aria-label="ألعاب أكثر">التالي ←</button></div><div class="empty" id="empty">ما لقينا ألعاب تطابق بحثك. جرّب كلمة ثانية.</div></section>
+<section class="faq" id="faq"><div class="section-head"><div><h2>❓ الأسئلة الشائعة</h2><p>إجابات سريعة عن متجر كنز قيمر</p></div></div>
+<details><summary>هل الأسعار المعروضة مؤكدة؟</summary><p>لا، الأسعار في النسخة الحالية تجريبية للتصميم فقط وليست عروض بيع مؤكدة.</p></details>
+<details><summary>هل أقدر أشتري اللعبة وأستلمها مباشرة؟</summary><p>ليس حاليًا؛ الموقع نموذج أولي ولا يحتوي على دفع أو تسليم رقمي فعلي.</p></details>
+<details><summary>كيف أضيف لعبة إلى السلة؟</summary><p>اضغط زر «أضف إلى السلة»، وبيظهر إشعار صغير أعلى الشاشة لمدة 3 ثوانٍ، ويتحدث عدّاد السلة.</p></details>
+<details><summary>هل المتجر تابع رسميًا لـ Steam؟</summary><p>لا، كنز قيمر مشروع مستقل وغير تابع رسميًا لشركة Valve أو Steam.</p></details>
+</section>
+<section class="notice" id="about"><strong>ملاحظة مهمة قبل البيع الفعلي:</strong> هذه نسخة تجريبية للواجهة فقط. صور أغلفة الألعاب وشعار Steam تُحمّل من خوادم Steam عند توفر اتصال بالإنترنت. الأسعار أمثلة توضيحية وليست عروض بيع مؤكدة، ولا تتوفر مفاتيح تفعيل أو مدفوعات أو تسليم رقمي حقيقي في هذه النسخة. قبل استقبال الطلبات، أضف منتجات تملك حق بيعها، وسياسة استرجاع وخصوصية، واربط بوابة دفع مناسبة.</section>
+</main>
+<footer><div class="wrap footrow"><div><strong style="color:var(--gold)">كنز قيمر | KANZ GAMER</strong><br>متجر ألعاب رقمي — نموذج أولي</div><div>© <span id="year"></span> كنز قيمر. جميع الحقوق محفوظة.</div><div>صنع بواسطة: <strong style="color:var(--gold)">إياد حسن حكمي</strong><br>متجر مستقل غير تابع رسميًا لشركة Valve أو Steam.</div></div></footer>
+<div class="toast" id="cartToast" role="status" aria-live="polite"><div class="toast-icon">✓</div><div class="toast-copy"><strong>تمت الإضافة إلى السلة</strong><span id="toastGame">أضيفت اللعبة بنجاح</span></div><span class="toast-time">الآن</span></div>
+<div class="detail-overlay" id="detailOverlay" role="dialog" aria-modal="true" aria-label="تفاصيل اللعبة"><article class="detail-card"><div id="detailCover" class="detail-cover"></div><h2 id="detailTitle"></h2><div id="detailCategory" class="tag" style="display:inline-block"></div><p id="detailDescription" class="detail-description"></p><div class="detail-bottom"><button class="detail-close" id="closeDetails">إغلاق ✕</button><div><div style="color:var(--muted);font-size:12px">السعر</div><div id="detailPrice" class="detail-price"></div></div></div></article></div>
+<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-label="سلة المشتريات"><aside class="drawer"><div class="drawerhead"><h2>🛒 سلة المشتريات</h2><button class="close" id="closeCart">إغلاق ✕</button></div><div id="cartItems"></div><div class="total"><span>الإجمالي</span><span id="total">0.00 ر.س</span></div><button class="checkout" id="checkout">متابعة الطلب (تجريبي)</button><p class="checkout-note">لا يتم تحصيل أي مبلغ في هذه النسخة. أضف بوابة دفع قبل الإطلاق.</p></aside></div>
+<script>
+const games=[
+{id:1,title:"Hogwarts Legacy",cat:"مغامرات",price:9.90,old:"",appid:990080,colors:["#243c6b","#8a5b8d"],desc:"Explore the wizarding world in this open-world adventure."},
+{id:2,title:"Red Dead Redemption 2",cat:"عالم مفتوح",price:9.50,old:"",appid:1174180,colors:["#8b321e","#e3a34a"],desc:"An epic story set in the American Wild West."},
+{id:3,title:"Grand Theft Auto V",cat:"عالم مفتوح",price:8.90,old:"",appid:271590,colors:["#571d23","#df7a3d"],desc:"Explore Los Santos in this open-world action game."},
+{id:4,title:"Cyberpunk 2077",cat:"مغامرات",price:9.90,old:"",appid:1091500,colors:["#edc81f","#50215e"],desc:"An open-world action-adventure in a futuristic city."},
+{id:5,title:"ELDEN RING",cat:"مغامرات",price:9.90,old:"",appid:1245620,colors:["#152f30","#d2a64b"],desc:"Explore a vast fantasy world full of challenges."},
+{id:6,title:"Stardew Valley",cat:"مستقلة",price:7.50,old:"",appid:413150,colors:["#2e8056","#f1bd66"],desc:"Build a farm, meet the locals, and enjoy country life."},
+{id:7,title:"Phasmophobia",cat:"رعب",price:5.90,old:"",appid:739630,colors:["#111b36","#754c85"],desc:"Investigate paranormal activity with your team."},
+{id:8,title:"Forza Horizon 5",cat:"سباقات",price:8.00,old:"",appid:1551360,colors:["#ba2e29","#efb73d"],desc:"Race across the beautiful landscapes of Mexico."},
+{id:9,title:"Baldur's Gate 3",cat:"استراتيجية",price:6.90,old:"",appid:1086940,colors:["#102d56","#397fb2"],desc:"Gather your party in this story-rich fantasy RPG."},
+{id:10,title:"The Witcher 3: Wild Hunt",cat:"مغامرات",price:4.90,old:"",appid:292030,colors:["#31523e","#b9a35c"],desc:"Become a monster hunter in a vast fantasy world."},
+{id:11,title:"Portal 2",cat:"مستقلة",price:3.90,old:"",appid:620,colors:["#1b6059","#56b9a1"],desc:"Solve mind-bending puzzles using a portal device."},
+{id:12,title:"Euro Truck Simulator 2",cat:"سباقات",price:9.00,old:"",appid:227300,colors:["#334b6e","#9bc3d7"],desc:"Drive across Europe and build your trucking business."},
+{id:13,title:"Hades",cat:"مغامرات",price:8.50,appid:1145360,colors:["#6f263c","#e7a64a"],desc:"Fight your way out of the Underworld in this action roguelike."},
+{id:14,title:"Terraria",cat:"مستقلة",price:5.50,appid:105600,colors:["#236b43","#b6d46b"],desc:"Dig, fight, explore, and build in a world full of adventure."},
+{id:15,title:"Left 4 Dead 2",cat:"رعب",price:4.90,appid:550,colors:["#532a24","#b9b6a4"],desc:"Team up in a cooperative survival shooter."},
+{id:16,title:"The Forest",cat:"رعب",price:7.90,appid:242760,colors:["#264b32","#b0a36a"],desc:"Survive and explore a mysterious forest after a crash."},
+{id:17,title:"Slime Rancher",cat:"مستقلة",price:6.50,appid:433340,colors:["#3a8d65","#e3bc58"],desc:"Build a ranch and collect adorable slimes on a distant planet."},
+{id:18,title:"DOOM Eternal",cat:"مغامرات",price:9.90,appid:782330,colors:["#7b2a22","#d6a044"],desc:"Battle demonic forces in a fast-paced first-person action game."},
+{id:19,title:"Among Us",cat:"مستقلة",price:3.90,appid:945360,colors:["#263d65","#e65d5d"],desc:"Work together and figure out who the impostor is."},
+{id:20,title:"Subnautica",cat:"مغامرات",price:8.90,appid:264710,colors:["#126d83","#e0b34f"],desc:"Explore an alien ocean and uncover its secrets."},
+{id:21,title:"Cuphead",cat:"مستقلة",price:7.90,appid:268910,colors:["#9b3a2f","#e4c78b"],desc:"A challenging run-and-gun adventure inspired by classic cartoons."},
+{id:22,title:"Hollow Knight",cat:"مغامرات",price:6.90,appid:367520,colors:["#24334b","#8ba8ba"],desc:"Explore a beautifully hand-drawn underground kingdom."},
+{id:23,title:"No Man's Sky",cat:"مغامرات",price:9.90,appid:275850,colors:["#2d6a8b","#e5a65a"],desc:"Explore a vast universe of planets and discoveries."},
+{id:24,title:"The Sims 4",cat:"مستقلة",price:0.00,appid:1222670,colors:["#3d8751","#80c5e8"],desc:"Create characters and shape their lives in a life simulation game."}
+,{id:25,title:"Lies of P",cat:"مغامرات",price:9.90,appid:1627720,colors:["#263447","#b79a69"],desc:"A dark action RPG inspired by the tale of Pinocchio."}
+,{id:26,title:"Cult of the Lamb",cat:"مستقلة",price:7.90,appid:1313140,colors:["#402b3d","#d7c9b7"],desc:"Build a cult and explore a strange land in this action roguelike."}
+];
+let cart=[];let activeCat="الكل";let gamesPage=0;const gamesPerPage=6;
+const grid=document.getElementById("grid"),search=document.getElementById("search");
+function render(){
+ const q=search.value.trim().toLowerCase();
+ const filtered=games.filter(g=>(activeCat==="الكل"||g.cat===activeCat)&&(g.title.toLowerCase().includes(q)||g.cat.toLowerCase().includes(q)||g.desc.toLowerCase().includes(q)));
+ const pageCount=Math.max(1,Math.ceil(filtered.length/gamesPerPage));gamesPage=Math.min(gamesPage,pageCount-1);
+ const shown=filtered.slice(gamesPage*gamesPerPage,(gamesPage+1)*gamesPerPage);
+ grid.innerHTML=shown.map(g=>`<article class="game"><div class="cover steam-cover" style="--c1:${g.colors[0]};--c2:${g.colors[1]}"><img loading="lazy" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/${g.appid}/header.jpg" alt="${g.title} — الغلاف الأصلي من Steam" onerror="this.onerror=null;this.src='https://cdn.akamai.steamstatic.com/steam/apps/${g.appid}/header.jpg';this.onerror=function(){this.style.display='none';this.nextElementSibling.style.display='block'}"><span class="cover-title" style="display:none">${g.title}</span></div><div class="gamebody"><h3>${g.title}</h3><div class="desc">${g.desc}</div><div class="meta"><span class="tag">${g.cat}</span><span class="price">${g.price.toFixed(2)} <small>ر.س</small></span></div><button class="add" onclick="addToCart(${g.id})">＋ أضف إلى السلة</button></div></article>`).join("");
+ document.getElementById("empty").style.display=filtered.length?"none":"block";
+ document.getElementById("resultCount").textContent=`${filtered.length} لعبة`;
+ document.getElementById("pageInfo").textContent=`صفحة ${gamesPage+1} من ${pageCount}`;
+ document.getElementById("gamesPrev").disabled=gamesPage===0;
+ document.getElementById("gamesNext").disabled=gamesPage>=pageCount-1;
+}
+document.getElementById("gamesPrev").addEventListener("click",()=>{if(gamesPage>0){gamesPage--;render();document.getElementById("games").scrollIntoView({behavior:"smooth",block:"start"})}});
+document.getElementById("gamesNext").addEventListener("click",()=>{const q=search.value.trim().toLowerCase();const filtered=games.filter(g=>(activeCat==="الكل"||g.cat===activeCat)&&(g.title.toLowerCase().includes(q)||g.cat.toLowerCase().includes(q)||g.desc.toLowerCase().includes(q)));if((gamesPage+1)*gamesPerPage<filtered.length){gamesPage++;render();document.getElementById("games").scrollIntoView({behavior:"smooth",block:"start"})}});
+
+function showDetails(id){const g=games.find(x=>x.id===id);if(!g)return;const cover=document.getElementById("detailCover");cover.style.setProperty("--c1",g.colors[0]);cover.style.setProperty("--c2",g.colors[1]);cover.innerHTML=`<span>${g.emoji}</span>`;document.getElementById("detailTitle").textContent=g.title;document.getElementById("detailCategory").textContent=g.cat;document.getElementById("detailDescription").textContent=g.desc;document.getElementById("detailPrice").textContent=g.price.toFixed(2)+" ر.س";document.getElementById("detailOverlay").classList.add("open");}
+const detailOverlay=document.getElementById("detailOverlay");document.getElementById("closeDetails").onclick=()=>detailOverlay.classList.remove("open");detailOverlay.addEventListener("click",e=>{if(e.target===detailOverlay)detailOverlay.classList.remove("open")});document.addEventListener("keydown",e=>{if(e.key==="Escape")detailOverlay.classList.remove("open")});
+let toastTimer;
+function showCartToast(game){const toast=document.getElementById("cartToast");document.getElementById("toastGame").textContent=game.title+" — "+game.price.toFixed(2)+" ر.س";toast.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove("show"),3000);}
+function addToCart(id){const game=games.find(g=>g.id===id);if(!game)return;const item=cart.find(x=>x.id===id);if(item)item.qty++;else cart.push({...game,qty:1});renderCart();showCartToast(game);}
+function removeItem(id){cart=cart.filter(x=>x.id!==id);renderCart();}
+function renderCart(){
+ document.getElementById("cartCount").textContent=cart.reduce((s,x)=>s+x.qty,0);
+ document.getElementById("cartItems").innerHTML=cart.length?cart.map(x=>`<div class="cartline"><div><strong>${x.title}</strong><small>${x.qty} × ${x.price.toFixed(2)} ر.س</small><button class="remove" onclick="removeItem(${x.id})">حذف</button></div><strong>${(x.qty*x.price).toFixed(2)} ر.س</strong></div>`).join(""):'<p style="color:var(--muted)">سلتك فارغة حاليًا. أضف لعبة للبدء.</p>';
+ document.getElementById("total").textContent=cart.reduce((s,x)=>s+x.price*x.qty,0).toFixed(2)+" ر.س";
+}
+document.querySelectorAll(".filter").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));b.classList.add("active");activeCat=b.dataset.cat;gamesPage=0;render();}));
+search.addEventListener("input",()=>{gamesPage=0;render()});
+const overlay=document.getElementById("overlay");
+document.getElementById("openCart").onclick=()=>overlay.classList.add("open");
+document.getElementById("closeCart").onclick=()=>overlay.classList.remove("open");
+overlay.addEventListener("click",e=>{if(e.target===overlay)overlay.classList.remove("open")});
+document.getElementById("checkout").onclick=()=>alert("هذه نسخة تجريبية فقط؛ لا توجد مدفوعات أو تسليم ألعاب فعلي. اربط بوابة دفع ونظام تسليم قبل الإطلاق.");
+document.getElementById("year").textContent=new Date().getFullYear();
+
+const themeToggle=document.getElementById("themeToggle");
+function setTheme(theme){document.documentElement.dataset.theme=theme;themeToggle.textContent=theme==="light"?"🌙 داكن":"☀️ فاتح";themeToggle.setAttribute("aria-label",theme==="light"?"تفعيل الوضع الداكن":"تفعيل الوضع الفاتح");try{localStorage.setItem("kanz-theme",theme)}catch(e){}}
+let savedTheme="dark";try{savedTheme=localStorage.getItem("kanz-theme")||"dark"}catch(e){}
+setTheme(savedTheme);themeToggle.addEventListener("click",()=>setTheme(document.documentElement.dataset.theme==="light"?"dark":"light"));
+render();renderCart();
+</script>
+</body>
+</html>
